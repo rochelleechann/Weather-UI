@@ -1,0 +1,30 @@
+<!-- Resources -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-1-5">
+            <div class="card">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="column-inner">
+                            <h1>Test Weather App</h1>
+                            <div *ngIf="!submitted">
+                                <form #form="ngForm" (ngSubmit)="submit(form.value)" class="mb-5x" novalidate>
+                                    <div class="form-group">
+                                        <label>City:</label>
+                                        <input type="text" [(ngModel)]="city" class="form-control" name="city" aria-required>
+                                        <label>State:</label>
+                                        <input type="text" [(ngModel)]="state" class="form-control" name="state" aria-required>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Get Weather</button>
+                                </form>
+                            </div>
+                            <div *ngIf="submitted">
+                                <p>City: {{city}}, {{state}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

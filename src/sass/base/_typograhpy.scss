@@ -1,0 +1,56 @@
+/* Barcode Font */
+  body {
+    font-family: $font-roboto-stack;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 8px 0;
+  }
+  
+  h1 {
+    font-size: 33px;
+    font-weight: bold;
+    line-height: 41px;
+    margin: 0 0 spacing(3);
+    font-family: $font-montserrat-stack;
+  }
+  
+  h2 {
+    font-size: 23px;
+    line-height: 30px;
+    font-family: $font-montserrat-stack;
+  }
+  
+  h3 {
+    font-size: 19px;
+    line-height: 27px;
+    font-family: $font-montserrat-stack;
+  }
+  
+  h4 {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: $font-montserrat-stack;
+  }
+  
+  p {
+    margin-bottom: spacing(1);
+  }
+
+  a,
+  a:visited,
+  a:hover {
+    color: #1976d2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #125699;
+  }

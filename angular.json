@@ -5,7 +5,11 @@
   "projects": {
     "weather-ui": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -24,9 +28,17 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/sass/main.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/sass"
+              ]
+            }
           },
           "configurations": {
             "production": {
@@ -88,7 +100,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/sass/main.scss"
             ],
             "scripts": []
           }
@@ -119,6 +131,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "weather-ui"
+    }
+  },
+  "defaultProject": "weather-ui",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

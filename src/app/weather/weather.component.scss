@@ -1,0 +1,32 @@
+@media screen and (min-width: 992px) {
+    .col-md-offset-1-5 {
+      margin-left: 12.5%;
+    }
+  }
+
+.card {
+    padding: 0;
+
+    .column-inner {
+        padding: 40px 30px;
+    }
+}
+
+form {
+    max-width: 90%;
+
+    .form-group {
+      label {
+        color: #52575b;
+        margin-bottom: 0;
+      }
+
+      .small {
+        margin-top: 5px;
+      }
+    }
+
+    button {
+      width: 100%;
+    }
+  }
