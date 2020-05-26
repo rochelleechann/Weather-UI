@@ -3,7 +3,7 @@ api_version: 1
 threadsafe: true
 handlers:
 - url: /
-  static_files: dist/weather-ui/index.html
-  upload: dist/weather-ui/index.html
+  static_files: weather-ui/index.html
+  upload: weather-ui/index.html
 - url: /
-  static_dir: dist/weather-ui
+  static_dir: weather-ui

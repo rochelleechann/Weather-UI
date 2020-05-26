@@ -1,0 +1,32 @@
+export class Daily {
+    time: number;
+    summary: string;
+    icon: string;
+    sunriseTime: number;
+    sunsetTime: number;
+    precipIntensity: number;
+    precipIntensityMax: number;
+    precipIntensityMaxTime: number;
+    precipProbability: number;
+    precipType: string;
+    temperatureMin: number;
+    temperatureMinTime: number;
+    temperatureMax: number;
+    temperatureMaxTime: number;
+    apparentTemperatureMin: number;
+    apparentTemperatureMinTime: number;
+    apparentTemperatureMax: number;
+    apparentTemperatureMaxTime: number;
+    dewPoint: number;
+    windSpeed: number;
+    windGust: number;
+    windBearing: number;
+    cloudCover: number;
+    humidity: number;
+    pressure: number;
+    visibility: number;
+    ozone: number;
+    moonPhase: number;
+    uvIndex: number;
+    uvIndexTime: number;
+}

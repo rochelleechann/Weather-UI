@@ -7,17 +7,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { WeatherComponent } from './weather/weather.component';
 
+// Services
+import { HttpClientService } from './service/httpclient.service';
+import { WeatherService } from './service/weather.service';
+import { OverlayLoaderComponent } from './overlay-loader/overlay-loader.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent
+    WeatherComponent,
+    OverlayLoaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClientService, WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

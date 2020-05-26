@@ -3,28 +3,71 @@
     <div class="row">
         <div class="col-md-9 col-md-offset-1-5">
             <div class="card">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="column-inner">
-                            <h1>Test Weather App</h1>
-                            <div *ngIf="!submitted">
-                                <form #form="ngForm" (ngSubmit)="submit(form.value)" class="mb-5x" novalidate>
-                                    <div class="form-group">
-                                        <label>City:</label>
-                                        <input type="text" [(ngModel)]="city" class="form-control" name="city" aria-required>
-                                        <label>State:</label>
-                                        <input type="text" [(ngModel)]="state" class="form-control" name="state" aria-required>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Get Weather</button>
-                                </form>
+                <div class="column-inner">
+                    <h3>Want to know the weather?</h3>
+                    <p>Enter the city and state below:</p>
+                    <hr class="separator" />
+                    <div *ngIf="submissionFailed" class="alert alert-danger" role="alert">{{ errorMessage }}</div>
+                    <div *ngIf="!submitted">
+                        <form novalidate #weatherInfo="ngForm"
+                            (ngSubmit)="submitForm(weatherInfo.value, weatherInfo.valid)" class="mb-5x">
+                            <div class="form-group">
+                                <label>City:</label>
+                                <input type="text" [ngModel]="weatherForm.city" class="form-control" value="city"
+                                    name="city" #city="ngModel" placeholder="e.g. Irvine" required>
+                                <p [class.has-error]="!city.value && (!city.untouched || submitted || error)"
+                                    *ngIf="!city.value && (!city.untouched || submitted || error)">Error city field is
+                                    required.</p>
+                                <label>State:</label>
+                                <input type="text" [ngModel]="weatherForm.state" value="state" class="form-control"
+                                    name="state" #state="ngModel" placeholder="e.g. CA" required>
+                                <p [class.has-error]="!state.value && (!city.untouched || submitted || error)"
+                                    *ngIf="!state.value && (!state.untouched || submitted || error)">Error state field
+                                    is required.</p>
                             </div>
-                            <div *ngIf="submitted">
-                                <p>City: {{city}}, {{state}}</p>
+                            <button type="submit" class="btn btn-primary">Get Weather</button>
+                        </form>
+                    </div>
+                    <div *ngIf="submitted">
+                        <p>City: {{weatherForm.city}}, {{weatherForm.state}}</p>
+                        <p>Today's Date: {{todayDate}}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="submitted">
+                <div class="card">
+                    <div class="column-inner">
+                        <h4>Last Week's Daily Temperature</h4>
+                        <div class="primary_flex">
+                            <div class="primary_flex-item">
+                                <p>Need to convert?</p>
+                            </div>
+                            <div class="primary_flex-item">
+                                <button class="btn btn-outline-secondary btn-sm float-left" (click)="convertTemp()"><span  *ngIf="!convertTemperature">Change to Celcius</span><span *ngIf="convertTemperature">Change to Fahrenheit</span></button>
                             </div>
                         </div>
+                        <hr class="separator" />
+                        <p>Past Date: {{pastDate}}</p>
+                        <p>Sunrise: {{sunrise}}</p>
+                        <p>Sunset: {{sunset}}</p>
+                        <p>Summary: {{summary}}</p>
+                        <p *ngIf="!convertTemperature">Temperature: {{currentFTemperature}}°F</p>
+                        <p *ngIf="convertTemperature">Temperature: {{currentCTemperature}}°C</p>
+                        <p *ngIf="!convertTemperature">Low Temperature: {{temperatureFMin}}°F</p>
+                        <p *ngIf="convertTemperature">Low Temperature: {{temperatureCMin}}°C</p>
+                        <p *ngIf="!convertTemperature">High Temperature: {{temperatureFMax}}°F</p>
+                        <p *ngIf="convertTemperature">High Temperature: {{temperatureCMax}}°C</p>
+                        <p>Wind Speed: {{windSpeed}} miles per hour</p>
+                        <p>Wind Gust: {{windGust}} miles per hour</p>
+                        <p>Max UV Index: {{uvIndexTime}}</p>
+                        <p></p>
+                        <button class="btn btn-primary" (click)="reset()"><span *ngIf="!error">Find more
+                            information</span><span *ngIf="error">Go Back</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+<app-overlay-loader *ngIf="showLoader" [loadingTitle]="loadingTitle"></app-overlay-loader>

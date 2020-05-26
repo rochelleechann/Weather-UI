@@ -1,3 +1,6 @@
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 @import 'abstracts/variables';
 @import 'component/button';
 @import 'layout/forms';

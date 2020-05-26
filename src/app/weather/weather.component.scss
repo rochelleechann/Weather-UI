@@ -1,32 +1,44 @@
-@media screen and (min-width: 992px) {
-    .col-md-offset-1-5 {
-      margin-left: 12.5%;
-    }
-  }
+@import 'abstracts/variables';
 
 .card {
-    padding: 0;
+  box-shadow: 0 2px 4px 0 $dashboard-box-shadow;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+  width: 500px;
+  margin: 0 8px 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+  line-height: 24px;
 
-    .column-inner {
-        padding: 40px 30px;
-    }
+  .card-content {
+    margin-left: 45px;
+  }
+  .column-inner {
+    padding: 24px;
+  }
 }
 
-form {
-    max-width: 90%;
+.separator {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
 
-    .form-group {
-      label {
-        color: #52575b;
-        margin-bottom: 0;
-      }
-
-      .small {
-        margin-top: 5px;
-      }
-    }
-
-    button {
-      width: 100%;
-    }
+.primary_flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  &-item {
+    text-align: center;
   }
+}
+
+
+@media screen and (min-width: 992px) {
+  .col-md-offset-1-5 {
+    margin-left: 12.5%;
+  }
+}

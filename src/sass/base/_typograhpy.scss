@@ -54,3 +54,17 @@
   a:hover {
     color: #125699;
   }
+
+  .has-error {
+    color: $red;
+  }
+
+  
+:host {
+  font-family: $font-roboto-stack;
+  font-size: 14px;
+  color: #333;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

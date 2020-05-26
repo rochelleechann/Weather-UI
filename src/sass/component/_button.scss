@@ -1,226 +1,63 @@
-.btn {
-    margin: 8px 0;
-    min-width: 120px;
-    max-width: 100%;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 0;
-    text-transform: uppercase;
-    height: 40px;
-    padding: 10px 16px;
+.btn-primary {
+  width: 100%;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: $slate-gray;
+  color: white;
+  font-weight: 600;
+
+  img {
+    margin: 0 16px;
   }
+}
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+svg#clouds {
+  position: fixed;
+  bottom: -160px;
+  left: -230px;
+  z-index: -10;
+  width: 1920px;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+  .card:not(.highlight-card) {
+    width: 450px;
+  }
+
+  .card.highlight-card span {
+    margin-left: 72px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn {
+    width: 100%;
+  }
+}
   
-  .btn-primary {
-    color: $white;
-    background-color: $brand-red;
-    border-color: $brand-red;
-    &:active, &:focus {
-      color: $white;
-      background: $brand-red-hover;
-      border-color: $brand-red-hover;
-    }
-    &:disabled {
-      background: $brand-red-disable;
-      border-color: $brand-red-disable;
-      color: $white;
-      &:hover {
-        background: $brand-red-hover;
-        border-color: $brand-red-hover;
-      }
-    }
-    &:not(:disabled):hover {
-      color: $white;
-      background: $brand-red-hover;
-      border-color: $brand-red-hover;
-    }
+@media screen and (max-width: 991px) {
+  .form-group {
+    margin: 20px 0;
   }
-  
-  .form-group>.btn+.btn,
-  .button-container>.btn+.btn {
-    margin-left: spacing(1);
-  }
-  
-  @media screen and (max-width: 480px) {
-    .btn,
-    .btn-primary,
-    button:not(.navbar-toggle):not(.close) {
-      width: 100%;
-    }
-    .form-group>.btn+.btn,
-    .button-container>.btn+.btn {
-      margin-left: 0;
-      margin-top: spacing(1);
-    }
-  }
-  
-  @media screen and (max-width: 991px) {
-    .form-group {
-      margin: 20px 0;
-    }
-  }
-
-
-  @import "~bootstrap/dist/css/bootstrap.css";
-
-:host {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 14px;
-    color: #333;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-
-
-  .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-
-    img {
-      margin: 0 16px;
-    }
-  }
-
-
-  .content {
-    display: flex;
-    margin: 82px auto 32px;
-    padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 16px;
-  }
-
-  .card {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid #eee;
-    background-color: #fafafa;
-    width: 500px;
-    margin: 0 8px 16px;
-    padding: 16px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.2s ease-in-out;
-    line-height: 24px;
-  }
-
-  .card-container .card:not(:last-child) {
-    margin-right: 0;
-  }
-
-  .card.card-small {
-    height: 16px;
-    width: 168px;
-  }
-
-  .card-container .card:not(.highlight-card) {
-    cursor: pointer;
-  }
-
-  .card-container .card:not(.highlight-card):hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
-  }
-
-  .card-container .card:not(.highlight-card):hover .material-icons path {
-    fill: rgb(105, 103, 103);
-  }
-
-  .card.highlight-card {
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-    border: none;
-    width: auto;
-    min-width: 30%;
-    position: relative;
-  }
-
-  .card.card.highlight-card span {
-    margin-left: 60px;
-  }
-
-
-  footer {
-    margin-top: 8px;
-    display: flex;
-    align-items: center;
-    line-height: 20px;
-
-    a {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .github-star-badge {
-    color: #24292e;
-    display: flex;
-    align-items: center;
-    font-size: 12px;
-    padding: 3px 10px;
-    border: 1px solid rgba(27,31,35,.2);
-    border-radius: 3px;
-    background-image: linear-gradient(-180deg,#fafbfc,#eff3f6 90%);
-    margin-left: 4px;
-    font-weight: 600;
-    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-  }
-
-  .github-star-badge:hover {
-    background-image: linear-gradient(-180deg,#f0f3f6,#e6ebf1 90%);
-    border-color: rgba(27,31,35,.35);
-    background-position: -.5em;
-  }
-
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
-
-
-  /* Responsive Styles */
-  @media screen and (max-width: 767px) {
-
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
-    .card:not(.highlight-card) {
-      height: 16px;
-      margin: 8px 0;
-    }
-
-    .card.highlight-card span {
-      margin-left: 72px;
-    }
-  }
+}

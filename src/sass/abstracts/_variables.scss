@@ -1,83 +1,27 @@
-
-// Rebrand Colors
-$brand-red: #eb0045; // Glidewell red
-$brand-red-hover: #c5023a;
-$brand-red-disable: #ff9b9b;
-$primary-slate-gray: #d0d1d2;
-$light-slate-gray: #f4f5f5;
-$slate-gray: #54575a;
-$slate-gray-light: #a4a5a7;
-$darkslate-gray: #24272a;
-
 // Black
-$black: #151515;
-$black10: #555555;
-$black20: #616161;
-$black47: #474747;
-$black11: #111111;
-$black00: #000000;
-
-// Blue
-$blue: #3482e3;
-$blue35: #354d7d;
-$blue63: #639be0;
-$blue23: #23527c;
-$blued2: #d2e8ff;
-$bluef5: #f5fff5;
-$blue1f: #1f73da;
-$brand-blue: #1f72da;
-$purple3d: #3d28c1;
-$hover-light-blue: #dbebff;
-$lightblue: #759ba9;
+$black: #000000;
 
 // Red
-$red: #e51331;
-$red42: #bc3742;
-$redff: #ffd6dc;
-
-// Orange
-$orangeff: #ffaa00;
-
-// Green
-$green: #5cb85c;
-$green10: #408040;
+$red: #eb0045;
 
 // Gray
 $gray: #e1e1e1;
-$gray10: #595959;
-$gray11: #f3f3f3;
-$gray16: #e4e4e4;
-$gray48: #7a7a7a;
-$gray88: #888888;
-$graybb: #bbbbbb;
-$graybd: #bdbdbd;
-$graye7: #e7e7e7;
-$graydb: #dbdbdb;
-$graydd: #dddddd;
-$graye3: #e3e3e3;
-$gray4: #c4c4c4;
-$gray66: #666666;
-$darkgray: $black10;
-$border-gray20: #b2b2b2;
 $lightgray: #dedede;
-$border-gray: #e0e0e0;
+$slate-gray: #54575a;
+$darkslate-gray: #24272a;
+
 
 // White
 $white: #ffffff;
-$white20: #f9f9f9;
 
-$warning-background-color: #fff8c8;
-$warning-border-color: #ffe433;
 $link-color: $darkslate-gray;
 $link-hover-color: #010101;
 $dashboard-box-shadow: rgba(0, 0, 0, 0.2);
 
-// Spacing
-$spacer: 8px;
 // Fonts
 $font-montserrat-stack: ('Montserrat', sans-serif);
 $font-roboto-stack: ('Roboto', sans-serif);
-$barcode-stack: ('Code39AzaleaFont', 'Montserrat', sans-serif);
+
 // Breakpoints
 $breakpoints: (
   'xxs': (max-width: 480px),
@@ -86,5 +30,3 @@ $breakpoints: (
   'md': (min-width: 992px),
   'lg': (min-width: 1200px)
 );
-
-$nav-break: 807px;
