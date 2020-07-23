@@ -1,5 +1,5 @@
 # WeatherUi
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1. Project was created to complete a coding assessment assignment during an interview.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1. Project was created to complete a coding assessment assignment during an interview. This quick application is using Angular as a front end frame work using Google Cloud Platform and Golang as a backend service. You can visit the deployed versions here: https://weather-app-277816.uc.r.appspot.com/
 
 ## Development server
 
